@@ -24,7 +24,10 @@ $CONFIG = [
     'updatechecker' => false,
     'check_for_working_htaccess' => false,
     'loglevel' => 1,
-    'mail_domain' => $primary_url,
+    'mail_smtpmode' => 'smtp',
+    'mail_from_address' => getenv('DDEV_PROJECT'),
+    'mail_domain' => getenv('DDEV_TLD'),
     'mail_smtphost' => 'localhost',
-    'mail_smtpport' => getenv('DDEV_HOST_MAILPIT_PORT'),
+    'mail_smtpport' => 1025,
+    'htaccess.RewriteBase' => '/',
 ];
