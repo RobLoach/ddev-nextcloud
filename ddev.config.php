@@ -30,4 +30,9 @@ $CONFIG = [
     'mail_smtphost' => 'localhost',
     'mail_smtpport' => 1025,
     'htaccess.RewriteBase' => '/',
+    'debug' => true,
+    'trusted_proxies' => [
+        $_SERVER['SERVER_ADDR'] ?? ''
+    ],
+    'overwritehost' => $url['host'],
 ];
