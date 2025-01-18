@@ -13,17 +13,16 @@ use_dns_when_possible: true
 composer_version: "2"
 corepack_enable: false
 
-web_environment:
-- NC_dbhost=db
-- NC_dbtype=mysql
-- NC_dbhost=db
-- NC_dbpassword=db
-- NC_dbuser=db
+# Requires PHP extension: gmp
+webimage_extra_packages: ["php${DDEV_PHP_VERSION}-gmp"]
 
 hooks:
   post-start:
     # Make sure the git submodules are there
     - exec: "git submodule update --init --recursive --force"
+
+    # Introduce the DDEV-specific configuration to NextCloud
+    - exec: "ln -sf ../../ddev.config.php nextcloud/config/ddev.config.php"
 
     # Set up NextCloud
     - exec: "composer install --working-dir=nextcloud"

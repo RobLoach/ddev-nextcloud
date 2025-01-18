@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+// Get the directory that's considered the web root.
+$docroot = getenv('DDEV_DOCROOT');
+
+// Switch to it.
+chdir($docroot);
+
+// Load the CLI
+//$argv = $_SERVER['argv'];
+require_once 'console.php';
