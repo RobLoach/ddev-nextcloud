@@ -28,13 +28,13 @@ hooks:
     - composer: install --working-dir=nextcloud
 
     # Install NextCloud if the config doesn't exist
-    - exec: "[ -f nextcloud/config/config.php ] || nextcloud/occ maintenance:install -q --no-interaction --no-warnings --database=mysql --database-name=db --database-host=db --database-user=db --database-pass=db --admin-user=admin --admin-pass=admin"
+    - exec: "[ -f nextcloud/config/config.php ] || nextcloud/occ maintenance:install --no-interaction --database=mysql --database-name=db --database-host=db --database-user=db --database-pass=db --admin-user=admin --admin-pass=admin"
 
     # Ensure the database has all indices
-    - exec: "nextcloud/occ db:add-missing-indices"
+    - exec: "nextcloud/occ db:add-missing-indices -q --no-warnings --no-interaction"
 
     # Fix any of the mimetypes
-    - exec: "nextcloud/occ maintenance:repair --include-expensive"
+    - exec: "nextcloud/occ maintenance:repair --include-expensive -q --no-interaction --no-warnings"
 
 # Key features of DDEV's config.yaml:
 
