@@ -36,6 +36,9 @@ hooks:
     # Fix any of the mimetypes
     - exec: "nextcloud/occ maintenance:repair --include-expensive -q --no-interaction --no-warnings"
 
+    # Clean up the htaccess file for Clean URLs
+    - exec: "nextcloud/occ maintenance:update:htaccess -q --no-interaction --no-warnings"
+
 # Key features of DDEV's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides
