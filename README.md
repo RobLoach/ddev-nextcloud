@@ -26,10 +26,22 @@ Development environment to run [NextCloud](https://nextcloud.com/) in [DDEV](htt
 
 ## Features
 
+These are a few of the developer features available.
+
+### CLI
+
 The NextCloud [`occ` Command Line Interface](https://docs.nextcloud.com/server/28/admin_manual/configuration_server/occ_command.html) is available by running...
 
 ```
 ddev occ
+```
+
+### Cron
+
+While NextCloud will run cron via AJAX when browsing, you can run it manually with...
+
+```
+ddev cron
 ```
 
 ## License
