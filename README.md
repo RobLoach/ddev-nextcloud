@@ -18,6 +18,11 @@ Development environment to run [NextCloud](https://nextcloud.com/) in [DDEV](htt
    ```
    http://nextcloud.ddev.site
    ```
+5. Log in...
+   ```
+   Username: admin
+   Password: admin
+   ```
 
 ## Features
 

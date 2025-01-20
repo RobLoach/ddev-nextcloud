@@ -6,6 +6,9 @@
  * @see https://docs.nextcloud.com/server/latest/admin_manual/configuration_server/config_sample_php_parameters.html
  */
 
+// Set the correct security policy
+header('Strict-Transport-Security: max-age=15552000; includeSubDomains');
+
 // Retrieve the DDEV URL
 $primary_url = getenv('DDEV_PRIMARY_URL');
 $url = parse_url($primary_url);
