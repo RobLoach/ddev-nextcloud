@@ -30,7 +30,7 @@ These are a few of the developer features available.
 
 ### CLI
 
-The NextCloud [`occ` Command Line Interface](https://docs.nextcloud.com/server/28/admin_manual/configuration_server/occ_command.html) is available by running...
+The NextCloud [`occ` Command Line Interface](https://docs.nextcloud.com/server/latest/admin_manual/occ_command.html) is available by running...
 
 ```
 ddev occ
@@ -42,6 +42,14 @@ While NextCloud will run cron via AJAX when browsing, you can run it manually wi
 
 ```
 ddev cron
+```
+
+### Mail
+
+When NextCloud sends emails, it can be reviewed with [DDEV's Mailpit](https://ddev.readthedocs.io/en/stable/users/usage/developer-tools/#email-capture-and-review-mailpit)...
+
+```
+http://nextcloud.ddev.site:8026
 ```
 
 ## License
