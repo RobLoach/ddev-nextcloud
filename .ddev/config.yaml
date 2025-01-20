@@ -39,6 +39,9 @@ hooks:
     # Clean up the htaccess file for Clean URLs
     - exec: "nextcloud/occ maintenance:update:htaccess -q --no-interaction --no-warnings"
 
+    # Set a mock email address for the admin
+    - exec: "nextcloud/occ user:setting admin settings email admin@nextcloud.ddev.site"
+
 # Key features of DDEV's config.yaml:
 
 # name: <projectname> # Name of the project, automatically provides
