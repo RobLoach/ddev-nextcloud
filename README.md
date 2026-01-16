@@ -16,7 +16,7 @@ Development environment to run [NextCloud](https://nextcloud.com/) in [DDEV](htt
    ```
 4. Visit the instance in your browser
    ```
-   http://nextcloud.ddev.site
+   ddev launch # Visit http://nextcloud.ddev.site
    ```
 5. Log in...
    ```
