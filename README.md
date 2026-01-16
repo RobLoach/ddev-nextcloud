@@ -46,11 +46,13 @@ ddev cron
 
 ### Mail
 
-When NextCloud sends emails, it can be reviewed with [DDEV's Mailpit](https://ddev.readthedocs.io/en/stable/users/usage/developer-tools/#email-capture-and-review-mailpit)...
+Emails sent from NextCloud can be reviewed through [DDEV's Mailpit](https://ddev.readthedocs.io/en/stable/users/usage/developer-tools/#email-capture-and-review-mailpit)...
 
+```sh
+ddev mailpit
 ```
-http://nextcloud.ddev.site:8026
-```
+
+Should be available at: `http://nextcloud.ddev.site:8026`
 
 ## Development
 

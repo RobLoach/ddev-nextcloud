@@ -29,7 +29,6 @@ $CONFIG = [
         $url['host'] ?? ''
     ],
     'overwrite.cli.url' => $primary_url,
-    'mail_smtpmode' => 'null',
     'appcodechecker' => false,
     'updatechecker' => false,
     'check_for_working_htaccess' => false,
@@ -45,6 +44,7 @@ $CONFIG = [
         $_SERVER['SERVER_ADDR'] ?? ''
     ],
     'overwritehost' => $url['host'] ?? '',
+    'datadirectory' => '/ddev/data',
 ];
 
 // Enable memcache only if we're not using the command line interface.
