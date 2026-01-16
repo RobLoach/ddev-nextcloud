@@ -43,8 +43,7 @@ $CONFIG = [
     'trusted_proxies' => [
         $_SERVER['SERVER_ADDR'] ?? ''
     ],
-    'overwritehost' => $url['host'] ?? '',
-    'datadirectory' => '/ddev/data',
+    'overwritehost' => $url['host'] ?? ''
 ];
 
 // Enable memcache only if we're not using the command line interface.
