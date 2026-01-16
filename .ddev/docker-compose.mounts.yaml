@@ -2,4 +2,6 @@ services:
   web:
     # Mount the data directory so it's available.
     volumes:
-    - "data:/ddev/data"
+      - type: bind
+        source: ./data
+        target: /ddev/data
