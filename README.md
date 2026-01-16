@@ -52,6 +52,18 @@ When NextCloud sends emails, it can be reviewed with [DDEV's Mailpit](https://dd
 http://nextcloud.ddev.site:8026
 ```
 
+## Development
+
+To update NextCloud...
+
+1. Update the branch for the submodule
+
+   ``` sh
+   git submodule set-branch --branch v32.0.5 nextcloud
+   ```
+
+2. Ensure [`.gitmodules`](.gitmodules) is updated
+
 ## License
 
 [MIT](LICENSE)
