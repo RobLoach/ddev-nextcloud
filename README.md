@@ -46,11 +46,25 @@ ddev cron
 
 ### Mail
 
-When NextCloud sends emails, it can be reviewed with [DDEV's Mailpit](https://ddev.readthedocs.io/en/stable/users/usage/developer-tools/#email-capture-and-review-mailpit)...
+Emails sent from NextCloud can be reviewed through [DDEV's Mailpit](https://ddev.readthedocs.io/en/stable/users/usage/developer-tools/#email-capture-and-review-mailpit)...
 
+```sh
+ddev mailpit
 ```
-http://nextcloud.ddev.site:8026
-```
+
+Should be available at: `http://nextcloud.ddev.site:8026`
+
+## Development
+
+To update NextCloud...
+
+1. Update the branch for the submodule
+
+   ``` sh
+   git submodule set-branch --branch v32.0.5 nextcloud
+   ```
+
+2. Ensure [`.gitmodules`](.gitmodules) is updated
 
 ## License
 

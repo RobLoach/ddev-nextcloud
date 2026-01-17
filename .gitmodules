@@ -1,6 +1,5 @@
 [submodule "nextcloud"]
 	path = nextcloud
 	url = https://github.com/nextcloud/server.git
+	branch = v32.0.5
 	ignore = dirty
-	branch = v31.0.12
-	shallow = true
